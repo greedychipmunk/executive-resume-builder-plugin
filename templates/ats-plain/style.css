@@ -1,0 +1,54 @@
+/* ats-plain — maximally ATS-safe, single column, no color, selectable text.
+   Default template. Applied to pandoc HTML -> PDF (weasyprint/wkhtmltopdf). */
+
+@page {
+  size: Letter;
+  margin: 0.6in 0.7in;
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 10.5pt;
+  line-height: 1.35;
+  color: #111;
+  max-width: 7.1in;
+  margin: 0 auto;
+}
+
+/* Name */
+h1 {
+  font-size: 20pt;
+  margin: 0 0 2pt 0;
+  font-weight: 700;
+  letter-spacing: 0.3pt;
+}
+
+/* Section headings — standard names, clearly delimited for ATS + humans */
+h2 {
+  font-size: 11pt;
+  text-transform: uppercase;
+  letter-spacing: 0.6pt;
+  border-bottom: 1px solid #333;
+  padding-bottom: 2pt;
+  margin: 14pt 0 6pt 0;
+}
+
+/* Role titles */
+h3 {
+  font-size: 10.5pt;
+  margin: 8pt 0 1pt 0;
+  font-weight: 700;
+}
+
+p { margin: 2pt 0; }
+
+ul {
+  margin: 3pt 0 6pt 0;
+  padding-left: 16pt;
+}
+
+li { margin: 1.5pt 0; }
+
+a { color: #111; text-decoration: none; }
+
+/* Keep everything single-column and readable; no decorative elements. */

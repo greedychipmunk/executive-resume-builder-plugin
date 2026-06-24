@@ -1,0 +1,56 @@
+/* modern-twocolumn — contemporary layout with an accent sidebar.
+   NOTE: two-column layouts carry ATS risk. This template linearizes the MAIN
+   column first in source order, so extraction stays sensible, but always run the
+   round-trip test in references/ats-rules.md before using it for an ATS upload.
+   Prefer ats-plain for pure ATS submissions; use this for human-facing delivery. */
+
+@page {
+  size: Letter;
+  margin: 0.5in;
+}
+
+:root { --accent: #1f6f6f; }   /* teal accent */
+
+body {
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-size: 10pt;
+  line-height: 1.34;
+  color: #1c1c1c;
+}
+
+h1 {
+  font-size: 22pt;
+  font-weight: 700;
+  color: var(--accent);
+  margin: 0 0 2pt 0;
+}
+
+/* Contact / headline line under the name */
+h1 + p { color: #555; margin: 0 0 10pt 0; font-size: 9.5pt; }
+
+h2 {
+  font-size: 10.5pt;
+  text-transform: uppercase;
+  letter-spacing: 0.8pt;
+  color: var(--accent);
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 2pt;
+  margin: 12pt 0 6pt 0;
+}
+
+h3 { font-size: 10.5pt; font-weight: 700; margin: 7pt 0 1pt 0; }
+
+p { margin: 2pt 0; }
+ul { margin: 3pt 0 6pt 0; padding-left: 15pt; }
+li { margin: 1.5pt 0; }
+a { color: var(--accent); text-decoration: none; }
+
+/* Optional two-column treatment.
+   Pandoc emits flat HTML, so true columns require wrapping divs (e.g. a Lua
+   filter or a custom HTML template). As shipped, this renders as a single clean
+   accented column. To enable real columns, wrap content in:
+     <div class="layout"><aside class="sidebar">…</aside><main>…</main></div>
+   and the rules below take effect. */
+.layout { display: grid; grid-template-columns: 2.1in 1fr; gap: 0.35in; }
+.sidebar { font-size: 9.5pt; color: #333; }
+.sidebar h2 { margin-top: 8pt; }
