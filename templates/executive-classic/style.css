@@ -1,0 +1,60 @@
+/* executive-classic — refined serif, generous spacing, leadership-oriented.
+   ATS-safe single column with a subtle accent. Selectable text. */
+
+@page {
+  size: Letter;
+  margin: 0.7in 0.8in;
+}
+
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 10.5pt;
+  line-height: 1.4;
+  color: #1a1a1a;
+  max-width: 7.0in;
+  margin: 0 auto;
+}
+
+/* Name + headline block */
+h1 {
+  font-size: 23pt;
+  font-weight: 700;
+  margin: 0 0 1pt 0;
+  letter-spacing: 0.4pt;
+}
+
+/* The line directly under the name (headline / contact) reads as a subtitle */
+h1 + p {
+  font-size: 10.5pt;
+  color: #444;
+  margin: 0 0 8pt 0;
+  border-bottom: 2px solid #2a3f5f;   /* muted navy accent */
+  padding-bottom: 8pt;
+}
+
+h2 {
+  font-size: 12pt;
+  font-variant: small-caps;
+  letter-spacing: 0.5pt;
+  color: #2a3f5f;
+  border-bottom: 1px solid #c9c9c9;
+  padding-bottom: 2pt;
+  margin: 16pt 0 7pt 0;
+}
+
+h3 {
+  font-size: 11pt;
+  font-weight: 700;
+  margin: 9pt 0 1pt 0;
+  color: #1a1a1a;
+}
+
+/* Role context / mandate line (the first emphasized line under a role) */
+h3 + p em, h3 + p i { color: #555; }
+
+p { margin: 2pt 0; }
+
+ul { margin: 4pt 0 7pt 0; padding-left: 18pt; }
+li { margin: 2pt 0; }
+
+a { color: #2a3f5f; text-decoration: none; }
