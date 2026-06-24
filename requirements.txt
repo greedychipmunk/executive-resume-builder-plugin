@@ -1,0 +1,20 @@
+# Python dependencies for executive-resume-builder tools.
+# Install with:  pip install -r requirements.txt
+#
+# ats_score.py uses only the standard library and needs none of these.
+# extract.py and convert.py degrade gracefully when a dependency is missing.
+
+# PDF text extraction (extract.py) — pdfplumber preferred, pypdf fallback.
+pdfplumber>=0.11
+pypdf>=4.0
+
+# Optional: HTML->PDF rendering for convert.py without LibreOffice.
+# If you skip this, install LibreOffice instead (see README) and convert.py will
+# render via the Markdown -> ODT -> PDF fallback path.
+weasyprint>=60
+
+# ---------------------------------------------------------------------------
+# System (non-pip) dependencies — install separately:
+#   Pandoc        : brew install pandoc            | apt-get install pandoc
+#   LibreOffice   : brew install --cask libreoffice | apt-get install libreoffice
+#   poppler (for pdftotext fallback): brew install poppler | apt-get install poppler-utils
