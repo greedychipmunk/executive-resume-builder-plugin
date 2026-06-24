@@ -1,0 +1,24 @@
+{
+  "name": "executive-resume-builder",
+  "version": "0.1.0",
+  "description": "Sophisticated resume and cover-letter creation, editing, analysis, and job-tailoring with PDF, Markdown, and LibreOffice (.odt) read/write support.",
+  "author": {
+    "name": "greedychipmunk",
+    "url": "https://github.com/greedychipmunk"
+  },
+  "homepage": "https://github.com/greedychipmunk/executive-resume-builder-plugin",
+  "repository": "https://github.com/greedychipmunk/executive-resume-builder-plugin",
+  "license": "MIT",
+  "keywords": [
+    "resume",
+    "cv",
+    "cover-letter",
+    "ats",
+    "executive",
+    "job-search",
+    "career",
+    "pdf",
+    "libreoffice",
+    "markdown"
+  ]
+}
