@@ -1,0 +1,17 @@
+{
+  "description": "Warn before a Write overwrites a canonical résumé/cover-letter Markdown source.",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"${CLAUDE_PLUGIN_ROOT}/hooks/warn-canonical-overwrite.py\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}
